@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "replace-with-unique-slug",
+      "title": "SAMPLE HEADLINE — REPLACE BEFORE PUBLICATION",
+      "date": "YYYY-MM-DD",
+      "category": "News",
+      "summary": "Replace with a verified, fact-checked news report or official update.",
+      "image": "/assets/images/news/replace-with-news-image.jpg",
+      "imageAlt": "Write an accurate description of the photograph.",
+      "author": "Media Team",
+      "status": "draft",
+      "url": "/news/replace-with-unique-slug.html"
+    }
+  ],
+  "publishingNote": "Sample record only; do not publish as factual news."
+}
