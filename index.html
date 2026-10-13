@@ -1,14 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#0A2540">
-  <title>BABS Website Content Manager</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Babatunde Ogunlade | Official Website</title>
+  <meta name="description" content="Official website of Hon. Babatunde Sunday Ogunlade - Digital publisher, community leader, and youth advocate in Ibarapa East.">
+  <meta property="og:title" content="Babatunde Ogunlade | Official Website">
+  <meta property="og:description" content="Community leadership, news updates, and visionary youth advocacy in Ibarapa East.">
+  <meta property="og:image" content="https://babatundeogunlade.com/assets/images/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
-  <div id="nc-root"></div>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a href="/" class="brand-logo">BABATUNDE <span>OGUNLADE</span></a>
+      <button class="mobile-toggle" aria-label="Toggle Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/about" class="nav-link">About</a></li>
+        <li><a href="/news" class="nav-link">News & Press</a></li>
+        <li><a href="/gallery" class="nav-link">Gallery</a></li>
+        <li><a href="/contact" class="btn-primary">Get in Touch</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1 class="hero-title">Visionary Leadership & Community Advocacy</h1>
+        <p class="hero-subtitle">Official portal of Hon. Babatunde Sunday Ogunlade — Championing youth development, transparent governance, and economic growth in Ibarapa East.</p>
+        <div style="display:flex; gap:1rem;">
+          <a href="/about" class="btn-primary">Read Full Biography &rarr;</a>
+          <a href="/news" class="btn-primary" style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2);">Press Updates</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Key Focus Areas</h3>
+        <ul style="list-style:none; margin-top:1rem; line-height:2;">
+          <li>&#10003; Youth Vocational Empowerment & Tech Integration</li>
+          <li>&#10003; Constituency Infrastructure Development</li>
+          <li>&#10003; Educational Grants & Community Support</li>
+          <li>&#10003; Transparent Grassroots Governance</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2 class="section-title">Latest Updates & Announcements</h2>
+    <div class="grid-3" id="latest-news-container">
+      <!-- Loaded dynamically via site.js -->
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Hon. Babatunde Sunday Ogunlade</div>
+          <p>Dedicated to transparent leadership, community advancement, and youth empowerment across Ibarapa East Constituency and Oyo State.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Profile</a></li>
+            <li><a href="/news">Latest News</a></li>
+            <li><a href="/gallery">Photo Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal & Contact</h4>
+          <ul class="footer-links">
+            <li><a href="/contact">Contact Office</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Babatunde Sunday Ogunlade. All rights reserved. Designed & Hosted via Vercel.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/js/site.js"></script>
 </body>
 </html>
