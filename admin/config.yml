@@ -1,20 +1,92 @@
 backend:
   name: github
-  repo: babatundeogunladewebsite
+  repo: liberalreporters/babatundeogunladewebsite
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+site_url: https://babatundeogunlade.com
+display_url: https://babatundeogunlade.com
+locale: en
+media_folder: "assets/images/cms"
+public_folder: "/assets/images/cms"
 
 collections:
-  - name: "posts"
-    label: "News & Articles"
-    folder: "_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-      - {label: "Excerpt / Summary", name: "excerpt", widget: "text", required: false}
-      - {label: "Body Content", name: "body", widget: "markdown"}
+  - name: "press_centre"
+    label: "Press Centre"
+    files:
+      - label: "Press Centre Feed"
+        name: "press_centre_feed"
+        file: "press-centre.json"
+        fields:
+          - { label: "Schema Version", name: "schemaVersion", widget: "hidden", default: 1 }
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.date}}"
+            fields:
+              - { label: "Unique ID / Slug", name: "id", widget: "string" }
+              - { label: "Headline", name: "title", widget: "string" }
+              - { label: "Publication Date (YYYY-MM-DD)", name: "date", widget: "string", hint: "Use YYYY-MM-DD." }
+              - { label: "Category", name: "category", widget: "select", options: ["Press Release", "Official Statement", "Media Advisory", "Event Report", "Media Coverage", "Public Notice"] }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Full Text", name: "body", widget: "text", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image Description", name: "imageAlt", widget: "string", required: false }
+              - { label: "Author / Issuing Office", name: "author", widget: "string", default: "BABS Media Team" }
+              - { label: "Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
+              - { label: "Source / Verification Note", name: "source", widget: "string", required: false }
+              - { label: "Related Link", name: "url", widget: "string", required: false }
+          - { label: "Editorial Note", name: "publishingNote", widget: "string", required: false }
+
+  - name: "announcements"
+    label: "Announcements"
+    files:
+      - label: "Announcements Feed"
+        name: "announcements_feed"
+        file: "announcements.json"
+        fields:
+          - { label: "Schema Version", name: "schemaVersion", widget: "hidden", default: 1 }
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.date}}"
+            fields:
+              - { label: "Unique ID / Slug", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Announcement Date (YYYY-MM-DD)", name: "date", widget: "string", hint: "Use YYYY-MM-DD." }
+              - { label: "Category", name: "category", widget: "select", options: ["Announcement", "Public Notice", "Upcoming Event", "Official Announcement", "Community Update", "Media Advisory"] }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Full Announcement", name: "body", widget: "text" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image Description", name: "imageAlt", widget: "string", required: false }
+              - { label: "Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
+              - { label: "Event Start Date (YYYY-MM-DD)", name: "startDate", widget: "string", required: false }
+              - { label: "Event End Date (YYYY-MM-DD)", name: "endDate", widget: "string", required: false }
+              - { label: "Approved Contact", name: "contact", widget: "string", required: false }
+              - { label: "Authorising Source", name: "source", widget: "string", required: false }
+          - { label: "Editorial Note", name: "publishingNote", widget: "string", required: false }
+
+  - name: "news"
+    label: "News & Updates"
+    files:
+      - label: "News Feed"
+        name: "news_feed"
+        file: "news.json"
+        fields:
+          - { label: "Schema Version", name: "schemaVersion", widget: "hidden", default: 1 }
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.date}}"
+            fields:
+              - { label: "Unique ID / Slug", name: "id", widget: "string" }
+              - { label: "Headline", name: "title", widget: "string" }
+              - { label: "Publication Date (YYYY-MM-DD)", name: "date", widget: "string", hint: "Use YYYY-MM-DD." }
+              - { label: "Category", name: "category", widget: "string", default: "News" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image Description", name: "imageAlt", widget: "string", required: false }
+              - { label: "Author", name: "author", widget: "string", default: "Media Team" }
+              - { label: "Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
+              - { label: "Article URL", name: "url", widget: "string", required: false }
+              - { label: "Verifiable Source", name: "source", widget: "string", required: false }
+          - { label: "Editorial Note", name: "publishingNote", widget: "string", required: false }
