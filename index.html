@@ -262,7 +262,7 @@
 
   <script>
     function babsSite(){return {
-      page:'home',menu:false,openPillar:-1,prepared:false,copied:false,preparedText:'',
+      page:(['home','bio','politician','humanitarian','blueprint','news','contact'].includes(new URLSearchParams(window.location.search).get('page'))?new URLSearchParams(window.location.search).get('page'):'home'),menu:false,openPillar:-1,prepared:false,copied:false,preparedText:'',
       tabs:[
         {id:'home',label:'Home',short:'Home'},
         {id:'bio',label:'Biography',short:'The Man'},

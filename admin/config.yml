@@ -43,6 +43,7 @@ collections:
       - label: "Press Centre Feed"
         name: "press_centre_feed"
         file: "press-centre.json"
+        format: json
         fields:
           - { label: "Schema Version", name: "schemaVersion", widget: "hidden", default: 1 }
           - label: "Items"
@@ -70,6 +71,7 @@ collections:
       - label: "Announcements Feed"
         name: "announcements_feed"
         file: "announcements.json"
+        format: json
         fields:
           - { label: "Schema Version", name: "schemaVersion", widget: "hidden", default: 1 }
           - label: "Items"
@@ -98,6 +100,7 @@ collections:
       - label: "News Feed"
         name: "news_feed"
         file: "news.json"
+        format: json
         fields:
           - { label: "Schema Version", name: "schemaVersion", widget: "hidden", default: 1 }
           - label: "Items"
@@ -125,6 +128,7 @@ collections:
       - label: "Gallery Feed"
         name: "gallery_feed"
         file: "gallery.json"
+        format: json
         fields:
           - { label: "Schema Version", name: "schemaVersion", widget: "hidden", default: 1 }
           - label: "Photographs"

@@ -1,21 +1,5 @@
 {
   "schemaVersion": 1,
-  "items": [
-    {
-      "id": "replace-with-unique-announcement-slug",
-      "title": "DRAFT ANNOUNCEMENT — REPLACE BEFORE PUBLICATION",
-      "date": "YYYY-MM-DD",
-      "category": "Announcement",
-      "summary": "Write a clear summary.",
-      "body": "Add the complete approved announcement here.",
-      "image": "/assets/images/announcements/announcement-image-placeholder.svg",
-      "imageAlt": "Describe the artwork accurately.",
-      "status": "draft",
-      "startDate": "YYYY-MM-DD",
-      "endDate": "YYYY-MM-DD",
-      "contact": "Add an approved contact channel or remove this field.",
-      "source": "Add authorising office/source record."
-    }
-  ],
-  "publishingNote": "Template only. Verify details before publication."
+  "items": [],
+  "publishingNote": "Add only verified, approved content. Keep drafts out of the public site."
 }
