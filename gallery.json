@@ -1,16 +1,5 @@
 {
   "schemaVersion": 1,
-  "items": [
-    {
-      "id": "replace-with-event-slug-01",
-      "title": "Event title",
-      "date": "YYYY-MM-DD",
-      "location": "Verified location",
-      "image": "/assets/images/gallery/replace-with-event-image.jpg",
-      "alt": "Describe what is visibly shown.",
-      "caption": "Add an accurate caption.",
-      "credit": "Photographer/source, if known"
-    }
-  ],
-  "publishingNote": "Use authorised images and accurate captions."
+  "items": [],
+  "publishingNote": "Add only authorised photographs with accurate dates, captions, alt text and credits."
 }
