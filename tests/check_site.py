@@ -17,7 +17,7 @@ class SiteTests(unittest.TestCase):
   sitemap=(ROOT/'sitemap.xml').read_text();self.assertIn('https://babatundeogunlade.com',sitemap);self.assertNotIn('https://www.babatundeogunlade.com',sitemap)
  def test_local_links(self):
   for p in ROOT.rglob('*.html'):
-   for url in re.findall(r'(?:href|src)=\"(/[^\"#?]+)',p.read_text()):
+   for url in re.findall(r'(?:href|src)="(/[^"#?]+)',p.read_text()):
     if url.startswith(('/admin/','/api/')): continue
     local=ROOT/url.lstrip('/')
     if url.endswith('/'): local=local/'index.html'
