@@ -1,46 +1,22 @@
-# Image, News & Announcement Upload Guide
+# Image and publishing guide
+
 Repository: https://github.com/liberalreporters/babatundeogunladewebsite
 
-## Exact image folders
-- Official portrait: `assets/images/profile/` — suggested filename `babatunde-ogunlade-portrait.jpg`
-- Biography/professional photo: `assets/images/profile/` — suggested filename `babatunde-ogunlade-professional-photo.jpg`
-- Events/gallery: `assets/images/gallery/` — e.g. `eru-community-engagement-2026-10.jpg`
-- News photos: `assets/images/news/` — e.g. `community-update-2026-10.jpg`
-- Announcement graphics: `assets/images/announcements/` — e.g. `community-meeting-notice-2026-10.jpg`
+## Image folders
+- Homepage portrait and biography photos: `assets/images/profile/`.
+- Press/news images: `assets/images/news/`.
+- Announcement graphics: `assets/images/announcements/`.
+- Gallery photos: `assets/images/gallery/`.
 
-## Upload from your phone
-1. Open the repository link above and sign in to GitHub.
-2. Open `assets` → `images` → the required folder.
-3. Tap **Add file** → **Upload files**.
-4. Select the image from your phone and wait for it to upload.
-5. Enter a commit message such as `Add official profile portrait`.
-6. Choose **Commit directly to the main branch** and tap **Commit changes**.
+Use authorised images, descriptive filenames, accurate captions and alt text. Replace `portrait-placeholder.svg` with an approved image and update the corresponding image path.
 
-If a folder is missing, use **Add file** → **Create new file** and enter a path ending in `README.md`, for example `assets/images/news/README.md`. Commit it, then upload into that folder.
+## Publishing feeds
+- `press-centre.json`: press releases and official statements.
+- `announcements.json`: official notices and confirmed engagements.
+- `news.json`: verified news items.
+- `gallery.json`: authorised photographs.
 
-## Replacing a placeholder
-This pack contains SVG placeholder images so you can identify each image slot. Uploading a JPG does not automatically replace an SVG or update the page. Upload the real image, then update the page or JSON `image` field to its exact path. Example:
-`/assets/images/news/news-image-placeholder.svg` → `/assets/images/news/community-update-2026-10.jpg`
+Keep content as `draft` during review, then set `status` to `published` only after editorial approval. Public pages filter drafts. Gallery entries need a valid `YYYY-MM-DD` date, title, image URL, accurate caption, alt text and publication status.
 
-## Adding news
-1. Open `news.json` in GitHub and tap Edit (pencil).
-2. Replace the sample record or copy it for another story.
-3. Use a unique lowercase ID with hyphens; set the date as `YYYY-MM-DD`.
-4. Add headline, summary, image path, alt text, author and a source.
-5. Keep `status` as `draft` until verified and approved; then set it to `published`.
-6. Commit directly to `main`.
-Use `content-templates/news-article-template.md` to draft the full story first.
-
-## Adding announcements
-1. Open `announcements.json` and tap Edit.
-2. Replace or duplicate the sample record.
-3. Fill in title, date, summary, full body, image path, alt text, confirmed start/end dates and authorised contact as relevant.
-4. Keep `status` as `draft` until approved.
-5. Commit directly to `main`.
-Use `content-templates/announcement-template.md` to prepare the notice.
-
-## Important limitation
-JSON files are structured content templates. They will not automatically appear on the live site unless its HTML/JavaScript is configured to load and render them. The existing homepage has image-placeholder sections and `news.json` is a template. After uploading this pack, website code may still need to be connected to the portrait, gallery, news and announcements data. A GitHub commit alone does not guarantee that content appears live.
-
-## Publishing checks
-Verify names, roles, dates, venues, figures and quotations. Use accurate captions and meaningful alt text. Obtain image permission where needed. Never publish placeholder text as factual news.
+## CMS setup
+GitHub CMS authentication requires `GITHUB_OAUTH_CLIENT_ID` and `GITHUB_OAUTH_CLIENT_SECRET` in Vercel and the OAuth callback `https://babatundeogunlade.com/api/callback`. The optional Cloudinary picker requires the actual public cloud name and API key in `admin/config.yml`. Do not commit secrets. Configure these values before expecting the corresponding features to work.
