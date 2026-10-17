@@ -1,19 +1,5 @@
 {
   "schemaVersion": 1,
-  "items": [
-    {
-      "id": "replace-with-unique-news-slug",
-      "title": "DRAFT HEADLINE — REPLACE BEFORE PUBLICATION",
-      "date": "YYYY-MM-DD",
-      "category": "News",
-      "summary": "Write a concise, fact-checked summary.",
-      "image": "/assets/images/news/news-image-placeholder.svg",
-      "imageAlt": "Describe the image accurately.",
-      "author": "Media Team",
-      "status": "draft",
-      "url": "/news/replace-with-unique-news-slug.html",
-      "source": "Add a verifiable source before publication."
-    }
-  ],
-  "publishingNote": "Template only. Replace sample content; publish only after verification and website integration."
+  "items": [],
+  "publishingNote": "Add only verified, approved news items. Keep drafts out of the public site."
 }

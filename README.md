@@ -1,7 +1,7 @@
-# Babatunde Ogunlade Website — Content Upload Pack
+# Babatunde Ogunlade public information website
 
-Contains placeholder image files, image folder structure, `news.json`, `announcements.json`, and article/announcement drafting templates.
+Static-first multi-page website for biography, proposed priorities, press releases, official announcements and an authorised photo gallery.
 
-Start with `UPLOAD-GUIDE.md`.
+Run `python tests/check_site.py` to validate the site structure. See `UPLOAD-GUIDE.md` for image uploads and CMS publishing.
 
-Important: the JSON files are templates and need website integration before they automatically appear on the live site. This pack does not replace or deploy your existing website.
+The target domain is `https://babatundeogunlade.com`. A source commit does not itself confirm a successful Vercel deployment or DNS configuration.
