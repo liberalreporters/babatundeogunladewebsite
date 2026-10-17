@@ -143,6 +143,7 @@ collections:
               - { label: "Category", name: "category", widget: "select", options: ["Community", "Meetings", "Events", "Media", "Other"], required: false }
               - { label: "Photograph", name: "image", widget: "image", media_library: { config: { multiple: false } } }
               - { label: "Alt Text", name: "alt", widget: "string" }
+              - { label: "Publication Status", name: "status", widget: "select", options: ["draft", "published"], default: "draft" }
               - { label: "Caption", name: "caption", widget: "text", required: false }
               - { label: "Photographer / Credit", name: "credit", widget: "string", required: false }
           - { label: "Editorial Note", name: "publishingNote", widget: "string", required: false }
