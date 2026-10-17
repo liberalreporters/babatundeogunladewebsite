@@ -12,6 +12,15 @@ class SiteTests(unittest.TestCase):
     if item.get('status')=='published':
      self.assertTrue(item.get('title','').strip());self.assertRegex(item.get('date',''),r'^\d{4}-\d{2}-\d{2}$');self.assertNotRegex(item.get('title',''),r'DRAFT|replace-with|placeholder',re.I)
  def test_assets_and_domain(self):
+  self.assertIn('.site-nav[hidden]{display:flex!important}',(ROOT/'assets/css/site.css').read_text())
   for f in ['assets/css/site.css','assets/js/site.js','sitemap.xml','robots.txt']:self.assertTrue((ROOT/f).exists())
   sitemap=(ROOT/'sitemap.xml').read_text();self.assertIn('https://babatundeogunlade.com',sitemap);self.assertNotIn('https://www.babatundeogunlade.com',sitemap)
+ def test_local_links(self):
+  for p in ROOT.rglob('*.html'):
+   for url in re.findall(r'(?:href|src)=\"(/[^\"#?]+)',p.read_text()):
+    if url.startswith(('/admin/','/api/')): continue
+    local=ROOT/url.lstrip('/')
+    if url.endswith('/'): local=local/'index.html'
+    if not local.exists() and not url.endswith(('.html','.css','.js','.json','.svg','.jpg','.png','.webp','.xml','.txt')): local=ROOT/(url.lstrip('/')+'.html')
+    self.assertTrue(local.exists(),f'{p.relative_to(ROOT)} references missing {url}')
 if __name__=='__main__':unittest.main(verbosity=2)
